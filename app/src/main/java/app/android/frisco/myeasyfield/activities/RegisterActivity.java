@@ -72,5 +72,46 @@ public class RegisterActivity extends AppCompatActivity {
 
     public void registrar_usuario(){
         // se registrará el usuario
+        String nom,ape,email,user,pass;
+        nom=nombre.getText().toString();
+        ape=apellido.getText().toString();
+        email=correo.getText().toString();
+        user=usuario.getText().toString();
+        pass=clave1.getText().toString();
+
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
