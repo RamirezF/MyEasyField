@@ -6,13 +6,11 @@ import com.orm.dsl.Table;
 public class Canchas {
 
     private Long id;
-    private String name;
-    private String address;
+    private String tipo;
     private int num_field;
 
-    public Canchas(String name, String address, int num_field) {
-        this.name = name;
-        this.address = address;
+    public Canchas(String tipo, int num_field) {
+        this.tipo = tipo;
         this.num_field = num_field;
     }
 
@@ -27,20 +25,12 @@ public class Canchas {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
     public int getNum_field() {
@@ -55,8 +45,7 @@ public class Canchas {
     public String toString() {
         return "Canchas{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
-                ", address='" + address + '\'' +
+                ", tipo='" + tipo + '\'' +
                 ", num_field=" + num_field +
                 '}';
     }
