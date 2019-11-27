@@ -38,11 +38,12 @@
             android:id="@+id/txt_usuario"
             style="@style/Theme.AppCompat.Light"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40sp"
             android:hint="Usuario"
             android:textSize="20dp"
+            android:textStyle="bold"
             android:textAlignment="center"
-            android:drawableLeft="@android:drawable/btn_star_big_on"
+            android:textColorHint="@android:color/black"
             android:background="@drawable/edit_round"
             android:textColor="@android:color/holo_blue_dark" />
     </RelativeLayout>
@@ -59,11 +60,12 @@
             android:textColor="@android:color/holo_blue_dark"
             android:id="@+id/txt_password"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40sp"
             style="@style/Theme.AppCompat.Light"
             android:textAlignment="center"
-            android:drawableLeft="@android:drawable/btn_star_big_on"
             android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColorHint="@android:color/black"
             android:background="@drawable/edit_round"
             android:inputType="textPassword"
             android:hint="Contraseña"/>
@@ -73,22 +75,25 @@
         android:id="@+id/registrate_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/campo2"
-        android:layout_alignStart="@+id/campo2"
-        android:layout_marginTop="60dp"
+        android:layout_below="@id/btn_aceptar"
+        android:layout_alignEnd="@+id/campo2"
+        android:layout_marginTop="30dp"
         android:text="Regístrate"
         android:textColor="@android:color/holo_red_light"
+        android:textSize="20dp"
         android:textStyle="bold" />
 
     <Button
         android:id="@+id/btn_aceptar"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:background="@drawable/btn_round"
+        android:layout_marginTop="20dp"
         android:layout_below="@+id/campo2"
-        android:layout_alignEnd="@+id/campo2"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:text="Entrar" />
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:text="Entrar"
+        android:textColor="@android:color/white"/>
 
 
 </RelativeLayout>
