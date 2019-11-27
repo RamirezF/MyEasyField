@@ -1,4 +1,4 @@
-package app.android.frisco.myeasyfield.activities;
+package app.android.frisco.myeasyfield.activities.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
