@@ -1,5 +1,6 @@
 package app.android.frisco.myeasyfield.activities.activities;
 
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -14,6 +15,8 @@ import app.android.frisco.myeasyfield.activities.entities.Canchas;
 import app.android.frisco.myeasyfield.activities.entities.Complejo;
 import app.android.frisco.myeasyfield.activities.entities.Usuario;
 import app.android.frisco.myeasyfield.activities.repository.GeneratedRepository;
+import app.android.frisco.myeasyfield.activities.repository.UsuarioRepository;
+import com.orm.SugarRecord;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,19 +47,34 @@ public class MainActivity extends AppCompatActivity {
                 registrate();
             }
         });
+
         insert_data();
     }
 
-    public void ingresar(){
-        Intent intent=new Intent(this, MenuActivity.class);
-        startActivity(intent);
+    //Validación de login
+    private void ingresar(){
+        String user = usuario.getText().toString();
+        String pass = password.getText().toString();
+        Usuario u = UsuarioRepository.find(user, pass);
+        if (u!=null){
+            Intent intent=new Intent(this, MenuActivity.class);
+            startActivity(intent);
+            finish();
+        }else{
+            Toast.makeText(this, "Credenciales incorrectas, verifique el nombre de usuario y contraseña", Toast.LENGTH_SHORT).show();
+            usuario.setText("");
+            password.setText("");
+        }
     }
-    public void registrate(){
+
+    //Activity de registro
+    private void registrate(){
         Intent intent=new Intent(this, RegisterActivity.class);
         startActivity(intent);
     }
 
-    public void insert_data(){
+    //Insertar data por primera vez
+    private void insert_data(){
         if(GeneratedRepository.usuario.isEmpty() && GeneratedRepository.canchas.isEmpty()
                 && GeneratedRepository.complejo.isEmpty() && GeneratedRepository.reserva.isEmpty()){
             //Usuario
@@ -169,6 +187,21 @@ public class MainActivity extends AppCompatActivity {
             GeneratedRepository.canchas.add(new Canchas("Grass", 4));
             GeneratedRepository.canchas.add(new Canchas("Loza", 1));
             GeneratedRepository.canchas.add(new Canchas("Loza", 1));
+
+            //Guardar las canchas
+            for(Canchas can: GeneratedRepository.canchas){
+                SugarRecord.save(can);
+            }
+
+            //Guardar los complejos
+            for(Complejo c: GeneratedRepository.complejo){
+                SugarRecord.save(c);
+            }
+
+            //Guardar usuario
+            for(Usuario u : GeneratedRepository.usuario){
+                SugarRecord.save(u);
+            }
 
         }
     }

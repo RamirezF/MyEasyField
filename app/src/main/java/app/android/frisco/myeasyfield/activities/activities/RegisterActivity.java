@@ -1,5 +1,6 @@
 package app.android.frisco.myeasyfield.activities.activities;
 
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -48,6 +49,8 @@ public class RegisterActivity extends AppCompatActivity {
         String pass=clave1.getText().toString();
 
         UsuarioRepository.create(nom, apell, usu, corr, pass);
+        Toast.makeText(this, "Registrado correctamente", Toast.LENGTH_SHORT).show();
+        finish();
     }
 
 }

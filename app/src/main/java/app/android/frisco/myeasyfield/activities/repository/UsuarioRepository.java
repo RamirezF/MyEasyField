@@ -1,5 +1,7 @@
 package app.android.frisco.myeasyfield.activities.repository;
 
+import android.util.Log;
+import android.widget.Toast;
 import com.orm.SugarRecord;
 
 import java.util.List;
@@ -12,9 +14,14 @@ public class UsuarioRepository {
         return usuario;
     }
 
-    public static Usuario read(Long id){
-        Usuario usuario = SugarRecord.findById(Usuario.class, id);
-        return usuario;
+    public static Usuario find(String user, String pass){
+        List<Usuario> u= SugarRecord.find(Usuario.class, "USERNAME= '"+user+"' AND PASSWORD= '"+pass+"' ");
+        if (u.size()==0){
+            return null;
+        }else{
+            Usuario us = u.get(0);
+            return us;
+        }
     }
 
     public static void create(String name, String lastname, String username, String email, String password){
