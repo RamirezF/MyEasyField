@@ -8,15 +8,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import app.android.frisco.myeasyfield.R;
 import app.android.frisco.myeasyfield.activities.entities.Canchas;
 import app.android.frisco.myeasyfield.activities.entities.Complejo;
 import app.android.frisco.myeasyfield.activities.entities.Usuario;
 import app.android.frisco.myeasyfield.activities.repository.GeneratedRepository;
+import app.android.frisco.myeasyfield.activities.repository.UsuarioRepository;
 
 public class MainActivity extends AppCompatActivity {
-
     private EditText usuario;
     private EditText password;
     private TextView registrar;
@@ -30,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         password=findViewById(R.id.txt_password);
         registrar=findViewById(R.id.registrate_txt);
         aceptar=findViewById(R.id.btn_aceptar);
+
+        //insert_data();
 
         aceptar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,9 +52,22 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
     public void ingresar(){
-        Intent intent=new Intent(this, MenuActivity.class);
-        startActivity(intent);
+        String user=usuario.getText().toString();
+        String contra=password.getText().toString();
+
+        List<Usuario> usuario=UsuarioRepository.list();
+        usuario=new ArrayList<>();
+        for(int i=0; i<usuario.size(); i++){
+            String candidato=usuario.get(i).getUsername();
+            if(user.equals(candidato)){
+                                                                                                            // Ingreso de usuario
+                Toast.makeText(this,"Ingresó",Toast.LENGTH_SHORT).show();
+            }else{
+                Toast.makeText(this,"Usuario o contraseña incorrectas",Toast.LENGTH_SHORT).show();
+            }
+        }
     }
     public void registrate(){
         Intent intent=new Intent(this, RegisterActivity.class);

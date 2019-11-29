@@ -1,10 +1,10 @@
 package app.android.frisco.myeasyfield.activities.entities;
 
+import com.orm.dsl.Column;
 import com.orm.dsl.Table;
 
-@Table
+@Table(name = "Usuario")
 public class Usuario{
-
     private Long id;
     private String name;
     private String lastname;

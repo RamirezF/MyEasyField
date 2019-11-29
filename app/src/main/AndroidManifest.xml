@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="app.android.frisco.myeasyfield">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
     <application
         android:name="com.orm.SugarApp"
         android:allowBackup="true"
@@ -11,10 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <meta-data android:name="DATABASE" android:value="MyEasyField.db" />
-        <meta-data android:name="VERSION" android:value="1" />
+        <meta-data android:name="VERSION" android:value="2" />
         <meta-data android:name="QUERY_LOG" android:value="true" />
-        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="app.android.frisco.myeasyfield.activities.entities;
-" />
+        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="app.android.frisco.myeasyfield.activities.entities;" />
         <activity android:name=".activities.activities.RegisterActivity"></activity>
         <activity android:name=".activities.activities.MenuActivity" />
         <activity android:name=".activities.activities.MainActivity">

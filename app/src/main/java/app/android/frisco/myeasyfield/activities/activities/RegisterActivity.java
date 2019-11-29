@@ -6,9 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import app.android.frisco.myeasyfield.R;
+import app.android.frisco.myeasyfield.activities.repository.UsuarioRepository;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -19,7 +19,6 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText clave1;
     private EditText clave2;
     private Button btn_registrar;
-    private boolean valid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,82 +35,19 @@ public class RegisterActivity extends AppCompatActivity {
         btn_registrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                validar();
+                Registrar();
             }
         });
     }
 
-    public void validar(){
-        String pass1=" ";
-        String pass2="";
+    public void Registrar(){
+        String nom=nombre.getText().toString();
+        String apell=apellido.getText().toString();
+        String usu=usuario.getText().toString();
+        String corr=correo.getText().toString();
+        String pass=clave1.getText().toString();
 
-        pass1=clave1.getText().toString();
-        pass2=clave2.getText().toString();
-
-        if(pass1.equals(pass2)){
-            // ver si existe un mismo usuario
-            if(if_user_exist()){
-                registrar_usuario();
-            }else{
-                Toast.makeText(this,"Usuario ya registrado", Toast.LENGTH_SHORT).show();
-                Toast.makeText(this,"cambio de nombre de usuario",Toast.LENGTH_SHORT).show();
-            }
-
-            registrar_usuario();
-        }else{
-            Toast.makeText(this, "Error en ingresar las claves",Toast.LENGTH_SHORT).show();
-        }
+        UsuarioRepository.create(nom, apell, usu, corr, pass);
     }
 
-    public boolean if_user_exist(){
-        boolean validar=false;
-        // ver si existe el usuario
-
-        return true;
-    }
-
-    public void registrar_usuario(){
-        // se registrará el usuario
-        String nom,ape,email,user,pass;
-        nom=nombre.getText().toString();
-        ape=apellido.getText().toString();
-        email=correo.getText().toString();
-        user=usuario.getText().toString();
-        pass=clave1.getText().toString();
-
-    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
