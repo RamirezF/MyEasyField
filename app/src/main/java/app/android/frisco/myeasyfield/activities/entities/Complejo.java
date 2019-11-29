@@ -10,15 +10,19 @@ public class Complejo {
     private String address;
     private String district;
     private String phone;
+    private double latitud;
+    private double longitud;
 
     public Complejo() {
     }
 
-    public Complejo(String name, String address, String district, String phone) {
+    public Complejo(String name, String address, String district, String phone, double latitud, double longitud) {
         this.name = name;
         this.address = address;
         this.district = district;
         this.phone = phone;
+        this.latitud = latitud;
+        this.longitud = longitud;
     }
 
     public Long getId() {
@@ -49,7 +53,7 @@ public class Complejo {
         return district;
     }
 
-    public void setDistict(String distict) {
+    public void setDistrict(String district) {
         this.district = district;
     }
 
@@ -61,13 +65,32 @@ public class Complejo {
         this.phone = phone;
     }
 
+    public double getLatitud() {
+        return latitud;
+    }
+
+    public void setLatitud(double latitud) {
+        this.latitud = latitud;
+    }
+
+    public double getLongitud() {
+        return longitud;
+    }
+
+    public void setLongitud(double longitud) {
+        this.longitud = longitud;
+    }
+
     @Override
     public String toString() {
         return "Complejo{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +
+                ", district='" + district + '\'' +
                 ", phone='" + phone + '\'' +
+                ", latitud='" + latitud + '\'' +
+                ", longitud='" + longitud + '\'' +
                 '}';
     }
 }

@@ -20,6 +20,7 @@
         android:textSize="48sp"
         app:layout_constraintTop_toTopOf="parent" />
     <ImageView
+        android:id="@+id/imgcool"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_below="@+id/welcome"
@@ -32,6 +33,7 @@
         android:textColor="@android:color/holo_blue_dark"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imgcool"
         android:layout_centerVertical="true">
 
         <EditText
@@ -76,11 +78,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_aceptar"
-        android:layout_alignEnd="@+id/campo2"
         android:layout_marginTop="30dp"
         android:text="Regístrate"
         android:textColor="@android:color/holo_red_light"
         android:textSize="20dp"
+        android:layout_centerHorizontal="true"
         android:textStyle="bold" />
 
     <Button

@@ -4,7 +4,6 @@ import com.orm.dsl.Table;
 
 @Table
 public class Usuario{
-
     private Long id;
     private String name;
     private String lastname;
