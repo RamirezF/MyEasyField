@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:padding="16dp"
+        android:layout_height="match_parent"
+        tools:context=".activities.activities.ReservaActivity">
+
+    <TextView
+            android:id="@+id/title_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirmación de datos"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@android:color/black"/>
+
+    <TextView
+            android:id="@+id/res_name_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_1"
+            android:text="Complejo"
+            android:textSize="18sp"
+            android:textColor="@color/colorAccent"
+            android:textAlignment="center"/>
+
+    <TextView
+            android:id="@+id/res_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/res_name_title"
+            android:text="comlejo"
+            android:layout_margin="10dp"
+            android:textSize="18sp"
+            android:textAlignment="center"/>
+
+    <TextView
+            android:id="@+id/res_hora_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/res_name"
+            android:text="Hora"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/colorAccent"
+            android:textAlignment="center"/>
+
+    <TextView
+            android:id="@+id/res_hora"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/res_hora_title"
+            tools:text="hora"
+            android:layout_marginBottom="10dp"
+            android:textSize="18sp"
+            android:textAlignment="center"/>
+
+    <TextView
+            android:id="@+id/res_direccion_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/res_hora"
+            android:text="Cancha"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/colorAccent"
+            android:textAlignment="center"/>
+
+    <TextView
+            android:id="@+id/res_direccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/res_direccion_title"
+            tools:text="cancha"
+            android:layout_marginBottom="30dp"
+            android:textSize="18sp"
+            android:textAlignment="center"/>
+
+    <TextView
+            android:id="@+id/res_usuario_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/res_direccion"
+            android:text="Cancha"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/colorAccent"
+            android:textAlignment="center"/>
+
+    <TextView
+            android:id="@+id/res_usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/res_usuario_title"
+            tools:text="cancha"
+            android:layout_marginBottom="30dp"
+            android:textSize="18sp"
+            android:textAlignment="center"/>
+
+    <TextView
+            android:id="@+id/res_precio_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/res_usuario"
+            android:text="Precio"
+            android:textSize="24sp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/colorAccent"
+            android:textAlignment="center"/>
+
+    <TextView
+            android:id="@+id/res_precio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/res_precio_title"
+            android:text="S/. 120"
+            android:layout_marginBottom="30dp"
+            android:textSize="24sp"
+            android:textAlignment="center"/>
+
+    <Button
+            android:id="@+id/res_btn_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Listo"
+            style="@style/Widget.AppCompat.Button.Colored"/>
+
+</RelativeLayout>
