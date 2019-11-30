@@ -1,5 +1,6 @@
 package app.android.frisco.myeasyfield.activities.activities;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.view.View;
@@ -7,6 +8,11 @@ import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import app.android.frisco.myeasyfield.R;
 
 public class ReservaActivity extends AppCompatActivity {
@@ -43,8 +49,10 @@ public class ReservaActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 onBackPressed();
+                finish();
             }
         });
 
     }
+
 }

@@ -53,6 +53,7 @@ public class CanchasActivity extends FragmentActivity implements OnMapReadyCallb
                 i.putExtra("hora", num_hora.getSelectedItem().toString());
                 i.putExtra("cancha", num_cancha.getSelectedItem().toString());
                 startActivity(i);
+                finish();
             }
         });
 

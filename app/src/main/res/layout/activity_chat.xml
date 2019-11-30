@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/sky"
+    tools:context=".activities.activities.ChatActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@android:color/black"
+        android:hint="Enviar a"/>
+
+    <EditText
+        android:layout_marginTop="16dp"
+        android:id="@+id/mensajetxt"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:textColorHint="@android:color/black"
+        android:hint="Escriba su mensaje"
+        android:inputType="textPersonName"/>
+    <Button
+        android:id="@+id/btn_enviar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="Enviar"/>
+    <Button
+        android:id="@+id/btn_recibidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="Mensajes recibidos"/>
+
+    <Button
+        android:id="@+id/btn_volver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="Volver"/>
+
+</LinearLayout>

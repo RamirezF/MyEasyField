@@ -6,6 +6,7 @@
         android:layout_width="match_parent"
         android:padding="16dp"
         android:layout_height="match_parent"
+        android:background="@drawable/bluebrown"
         tools:context=".activities.activities.ReservaActivity">
 
     <TextView
