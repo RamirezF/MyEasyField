@@ -30,11 +30,23 @@ public class MenuActivity extends AppCompatActivity {
                 canchas();
             }
         });
+        btnReserve.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                reserva();
+            }
+        });
     }
 
     //Activity de búsqueda
     private void canchas(){
         Intent a = new Intent(this, CanchasActivity.class);
+        startActivity(a);
+    }
+
+    //Activity de reserva realizada
+    private void reserva(){
+        Intent a = new Intent(this, ReservaActivity.class);
         startActivity(a);
     }
 }

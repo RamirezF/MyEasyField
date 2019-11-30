@@ -2,7 +2,6 @@ package app.android.frisco.myeasyfield.activities.repository;
 
 import android.content.Context;
 import android.widget.Toast;
-import app.android.frisco.myeasyfield.activities.entities.Canchas;
 import app.android.frisco.myeasyfield.activities.entities.Complejo;
 import com.orm.SugarRecord;
 

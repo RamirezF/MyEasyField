@@ -9,18 +9,16 @@ public class Reserva {
     private String username;
     private double cost;
     private String time_init;
-    private String time_finish;
     private String name_comp;
-    private int number_camp;
+    private String number_camp;
 
     public Reserva() {
     }
 
-    public Reserva(String username, double cost, String time_init, String time_finish, String name_comp, int number_camp) {
+    public Reserva(String username, double cost, String time_init, String name_comp, String number_camp) {
         this.username = username;
         this.cost = cost;
         this.time_init = time_init;
-        this.time_finish = time_finish;
         this.name_comp = name_comp;
         this.number_camp = number_camp;
     }
@@ -57,14 +55,6 @@ public class Reserva {
         this.time_init = time_init;
     }
 
-    public String getTime_finish() {
-        return time_finish;
-    }
-
-    public void setTime_finish(String time_finish) {
-        this.time_finish = time_finish;
-    }
-
     public String getName_comp() {
         return name_comp;
     }
@@ -73,11 +63,11 @@ public class Reserva {
         this.name_comp = name_comp;
     }
 
-    public int getNumber_camp() {
+    public String getNumber_camp() {
         return number_camp;
     }
 
-    public void setNumber_camp(int number_camp) {
+    public void setNumber_camp(String number_camp) {
         this.number_camp = number_camp;
     }
 
@@ -88,7 +78,6 @@ public class Reserva {
                 ", username='" + username + '\'' +
                 ", cost=" + cost +
                 ", time_init='" + time_init + '\'' +
-                ", time_finish='" + time_finish + '\'' +
                 ", name_comp='" + name_comp + '\'' +
                 ", number_camp=" + number_camp +
                 '}';
